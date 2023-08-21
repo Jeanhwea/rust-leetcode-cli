@@ -215,7 +215,7 @@ mod file {
             suffix(&lang)?,
         );
 
-        path = path.replace("${fid}", &problem.fid.to_string());
+        path = path.replace("${fid}", &problem.get_fid());
         path = path.replace("${slug}", &problem.slug.to_string());
 
         Ok(path)

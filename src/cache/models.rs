@@ -49,6 +49,10 @@ impl Problem {
 
         res + "\n"
     }
+
+    pub fn get_fid(&self) -> String {
+        format!("{:0>4}", self.fid)
+    }
 }
 
 static DONE: &str = " ✔";
