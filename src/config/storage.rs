@@ -49,11 +49,22 @@ impl Storage {
 
     /// get code path
     pub fn code(&self) -> Result<String, crate::Error> {
-        let root = &self.root()?;
-        let p = PathBuf::from(root).join(&self.code);
-        if !PathBuf::from(&p).exists() {
-            fs::create_dir(&p)?
-        }
+        let home = dirs::home_dir()
+            .ok_or(Error::NoneError)?
+            .to_string_lossy()
+            .to_string();
+        let path = self.code.replace('~', &home);
+
+        let p = if !path.starts_with("/") {
+            let root = &self.root()?;
+            let abs_path = PathBuf::from(root).join(&path);
+            if !PathBuf::from(&abs_path).exists() {
+                fs::create_dir(&abs_path)?
+            };
+            abs_path
+        } else {
+            PathBuf::from(path)
+        };
 
         Ok(p.to_string_lossy().to_string())
     }
