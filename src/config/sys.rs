@@ -33,20 +33,20 @@ pub struct Urls {
 impl Default for Urls {
     fn default() -> Self {
         Self {
-            base: "https://leetcode.cn".into(),
-            graphql: "https://leetcode.cn/graphql".into(),
-            login: "https://leetcode.cn/accounts/login/".into(),
-            problems: "https://leetcode.cn/api/problems/$category/".into(),
-            problem: "https://leetcode.cn/problems/$slug/description/".into(),
-            tag: "https://leetcode.cn/tag/$slug/".into(),
-            test: "https://leetcode.cn/problems/$slug/interpret_solution/".into(),
-            session: "https://leetcode.cn/session/".into(),
-            submit: "https://leetcode.cn/problems/$slug/submit/".into(),
-            submissions: "https://leetcode.cn/submissions/detail/$id/".into(),
-            submission: "https://leetcode.cn/submissions/detail/$id/".into(),
-            verify: "https://leetcode.cn/submissions/detail/$id/check/".into(),
-            favorites: "https://leetcode.cn/list/api/questions".into(),
-            favorite_delete: "https://leetcode.cn/list/api/questions/$hash/$id".into(),
+            base: "https://leetcode-cn.com".into(),
+            graphql: "https://leetcode-cn.com/graphql".into(),
+            login: "https://leetcode-cn.com/accounts/login/".into(),
+            problems: "https://leetcode-cn.com/api/problems/$category/".into(),
+            problem: "https://leetcode-cn.com/problems/$slug/description/".into(),
+            tag: "https://leetcode-cn.com/tag/$slug/".into(),
+            test: "https://leetcode-cn.com/problems/$slug/interpret_solution/".into(),
+            session: "https://leetcode-cn.com/session/".into(),
+            submit: "https://leetcode-cn.com/problems/$slug/submit/".into(),
+            submissions: "https://leetcode-cn.com/submissions/detail/$id/".into(),
+            submission: "https://leetcode-cn.com/submissions/detail/$id/".into(),
+            verify: "https://leetcode-cn.com/submissions/detail/$id/check/".into(),
+            favorites: "https://leetcode-cn.com/list/api/questions".into(),
+            favorite_delete: "https://leetcode-cn.com/list/api/questions/$hash/$id".into(),
         }
     }
 }
