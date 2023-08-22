@@ -196,7 +196,7 @@ mod file {
         let mut path = format!("{}/{}.tests.dat", conf.storage.code()?, conf.code.pick);
 
         path = path.replace("${fid}", &problem.get_fid());
-        path = path.replace("${slug}", &problem.slug.to_string());
+        path = path.replace("${slug}", &problem.get_slug());
         Ok(path)
     }
 
@@ -216,7 +216,7 @@ mod file {
         );
 
         path = path.replace("${fid}", &problem.get_fid());
-        path = path.replace("${slug}", &problem.slug.to_string());
+        path = path.replace("${slug}", &problem.get_slug());
 
         Ok(path)
     }

@@ -53,6 +53,10 @@ impl Problem {
     pub fn get_fid(&self) -> String {
         format!("s{:0>4}", self.fid)
     }
+
+    pub fn get_slug(&self) -> String {
+        self.slug.replace("-", "_").to_string()
+    }
 }
 
 static DONE: &str = " ✔";
