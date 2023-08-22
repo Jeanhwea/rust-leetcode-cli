@@ -47,7 +47,7 @@ impl Default for Code {
             comment_leading: "".into(),
             test: true,
             lang: "rust".into(),
-            pick: "${fid}.${slug}".into(),
+            pick: "${fid}_${slug}".into(),
             submission: "${fid}.${slug}.${sid}.${ac}".into(),
         }
     }
