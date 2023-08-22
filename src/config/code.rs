@@ -2,11 +2,11 @@
 use serde::{Deserialize, Serialize};
 
 fn default_pick() -> String {
-    "${fid}_${slug}".into()
+    "${fid}-${slug}".into()
 }
 
 fn default_submission() -> String {
-    "${fid}_${slug}.${sid}.${ac}".into()
+    "${fid}-${slug}.${sid}.${ac}".into()
 }
 
 /// Code config
@@ -48,7 +48,7 @@ impl Default for Code {
             test: true,
             lang: "rust".into(),
             pick: "${fid}_${slug}".into(),
-            submission: "${fid}_${slug}.${sid}.${ac}".into(),
+            submission: "${fid}-${slug}.${sid}.${ac}".into(),
         }
     }
 }
