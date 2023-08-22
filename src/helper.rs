@@ -195,7 +195,7 @@ mod file {
         let conf = crate::config::Config::locate()?;
         let mut path = format!("{}/{}.tests.dat", conf.storage.code()?, conf.code.pick);
 
-        path = path.replace("${fid}", &problem.fid.to_string());
+        path = path.replace("${fid}", &problem.get_fid());
         path = path.replace("${slug}", &problem.slug.to_string());
         Ok(path)
     }
